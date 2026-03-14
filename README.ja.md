@@ -1,18 +1,18 @@
 # mc-chalk
 
-[日本語版はこちら](README.ja.md)
+[English version](README.md)
 
-Small library for building Minecraft Bedrock formatting-code strings with an API similar to Node.js chalk.
+Minecraft Bedrock の書式コード文字列を、Node.js の chalk に近い API で組み立てるための小さなライブラリです。
 
-When you write `chalk.red("text")` or `chalk.bold.yellow("warning")`, it returns a string with Minecraft `§` formatting codes.
+`chalk.red("text")` や `chalk.bold.yellow("warning")` のように書くと、Minecraft の `§` 書式コード付き文字列を返します。
 
-## Install
+## インストール
 
 ```bash
 npm install mc-chalk
 ```
 
-## Usage
+## 使い方
 
 ```ts
 import { chalk } from "mc-chalk";
@@ -26,15 +26,15 @@ console.log(`${warning}: low durability`);
 console.log(material);
 ```
 
-The return value is a plain `string`.
+返り値は通常の `string` です。
 
 ```ts
 const text: string = chalk.aqua("Water");
 ```
 
-## Chaining
+## チェーン
 
-You can chain multiple styles.
+複数の書式をチェーンして書くことができます。
 
 ```ts
 chalk.bold.red("Error");
@@ -42,15 +42,14 @@ chalk.italic.darkAqua("Info");
 chalk.obfuscated.white("Secret");
 ```
 
-Generated strings concatenate Minecraft formatting codes from left to right.
+生成される文字列には、左から順に Minecraft の書式コードが連結されます。
 
 ```ts
 chalk.bold.red("Red!");
 // => "§l§cRed!"
 ```
 
-## Available Styles
-
+## 利用可能なスタイル
 - `reset`
 - `obfuscated`
 - `bold`
@@ -84,7 +83,7 @@ chalk.bold.red("Red!");
 - `amethyst`
 - `resin`
 
-## Example
+## コード例
 
 ```ts
 import { world } from "@minecraft/server";

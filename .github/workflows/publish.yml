@@ -1,0 +1,45 @@
+name: Publish library
+# Triggered when a GitHub release is published.
+# Uses npm Trusted Publishers (OIDC) — no NPM_TOKEN secret required.
+# See: https://docs.npmjs.com/trusted-publishers#configuring-trusted-publishing
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  id-token: write  # required for OIDC trusted publishing and provenance
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Use Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "pnpm"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        run: pnpm i --frozen-lockfile
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Ensure export footer in d.ts
+        run: node .github/workflows/ensure-dts-export.js
+
+      - name: Publish package
+        run: pnpm publish --no-git-checks

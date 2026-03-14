@@ -1,0 +1,20 @@
+{
+  "include": [
+    "src",
+    "package"
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "noLib": true,
+    "types": [
+      "@bedrock-apis/env-types"
+    ],
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "mc-chalk": [
+        "package/main.ts"
+      ]
+    }
+  }
+}

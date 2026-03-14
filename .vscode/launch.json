@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "minecraft-js",
+      "request": "attach",
+      "name": "Attach to Minecraft",
+      "mode": "listen",
+      "localRoot": "${workspaceFolder}/src",
+      "sourceMapRoot": "${workspaceFolder}/scripts",
+      "targetModuleUuid": "025744a5-75b2-4ead-94e4-987ac148c98e",
+      "host": "localhost",
+      "port": 19144
+    }
+  ]
+}

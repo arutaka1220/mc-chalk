@@ -1,0 +1,38 @@
+{
+  "name": "bedrock-chalk",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "default": "./dist/main.js"
+    }
+  },
+  "main": "./dist/main.js",
+  "types": "./dist/main.d.ts",
+  "prepublishOnly": "scriptup build --release && node .github/workflows/ensure-dts-export.js",
+  "scripts": {
+    "build": "scriptup build --release",
+    "watch": "scriptup build --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@nano191225/scriptup": "^1.0.0",
+    "@bedrock-apis/env-types": "^1.0.0-beta.6",
+    "typescript": "^5.9.3",
+    "tsdown": "^0.21.2",
+    "@minecraft/server": "2.6.0-beta.1.26.3-stable",
+    "@minecraft/server-ui": "2.1.0-beta.1.26.3-stable"
+  },
+  "keywords": [
+    "minecraft",
+    "minecraft-bedrock",
+    "minecraft-script-api",
+    "scriptapi"
+  ],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ]
+}

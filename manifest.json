@@ -1,0 +1,45 @@
+{
+	"format_version": 3,
+	"header": {
+		"name": "mc-chalk-lib",
+		"description": "mc-chalk-lib",
+		"uuid": "45a394ec-6cd0-47aa-b836-9819d41e3776",
+		"version": "0.1.0",
+		"min_engine_version": "1.26.3"
+	},
+	"metadata": {
+		"authors": [
+			"YOUR NAME HERE"
+		],
+		"url": "https://example.com/your-project",
+		"generated_with": {
+			"nano191225-scriptup": [
+				"1.2.0"
+			]
+		}
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "13047ee3-4ec9-454b-b58c-7bdb04713db1",
+			"version": "0.1.0"
+		},
+		{
+			"type": "script",
+			"uuid": "025744a5-75b2-4ead-94e4-987ac148c98e",
+			"version": "0.1.0",
+			"language": "javascript",
+			"entry": "scripts/main.js"
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.6.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.1.0-beta"
+		}
+	]
+}

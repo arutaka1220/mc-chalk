@@ -4,7 +4,7 @@
 		"name": "mc-chalk-lib",
 		"description": "mc-chalk-lib",
 		"uuid": "45a394ec-6cd0-47aa-b836-9819d41e3776",
-		"version": "0.1.0",
+		"version": "1.0.1",
 		"min_engine_version": "1.26.3"
 	},
 	"metadata": {

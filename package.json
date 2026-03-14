@@ -1,6 +1,6 @@
 {
-  "name": "bedrock-chalk",
-  "version": "0.1.0",
+  "name": "mc-chalk",
+  "version": "1.0.1",
   "type": "module",
   "exports": {
     ".": {
@@ -10,6 +10,7 @@
   },
   "main": "./dist/main.js",
   "types": "./dist/main.d.ts",
+  "repository": "https://github.com/arutaka1220/mc-chalk.git",
   "prepublishOnly": "scriptup build --release && node .github/workflows/ensure-dts-export.js",
   "scripts": {
     "build": "scriptup build --release",
